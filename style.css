@@ -1,0 +1,250 @@
+/* RESET & DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+/* WARNA LATAR SELANG-SELING */
+.bg-one {
+    background-color: #0f172a;
+}
+.bg-two {
+    background-color: #172033;
+}
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid #334155;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8fafc;
+    text-decoration: none;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+.nav-menu a:hover {
+    color: #38bdf8;
+}
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #1e293b;
+    color: #38bdf8;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    border: 1px solid #334155;
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.hero-text p {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.profile-img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #334155;
+}
+/* SECTION UMUM */
+section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.section-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 35px;
+}
+/* ABOUT */
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    color: #94a3b8;
+}
+/* SKILLS & EXPERIENCE GRID */
+.skill-grid,
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.skill-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 25px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+.skill-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.skill-card p,
+.project-overlay p,
+.contact-item {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+/* PROJECTS / EXPERIENCE CARDS */
+.project-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.project-img-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+.project-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.project-img-box:hover .project-overlay {
+    opacity: 1;
+}
+.project-overlay h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.github-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.single-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+}
+/* CONTACT */
+.contact-box {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .hero-container,
+    .skill-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-image-wrapper {
+        order: -1;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .contact-box {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
